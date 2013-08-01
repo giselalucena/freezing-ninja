@@ -1,0 +1,37 @@
+Controle de Funcionario
+
+Funcionario
+	Nome
+	Idade
+	Cargo
+	CargaHorariaSemanal
+	
+===============
+Medico
+
+
+Dentista
+
+
+Auxiliar de Enfermagem
+
+
+Enfermeiro
+
+
+Porteiro
+
+
+Guarda
+
+
+Chefe
+=================
+
+Controle de Ferias
+	Nome do Funcionario
+	Periodo
+	
+Controle de Faltas
+	Nome do Funcionario
+	DataFalta
