@@ -1,37 +1,120 @@
 Controle de Funcionario
 
 Funcionario
+	Cod
 	Nome
-	Idade
+	DataNascimento
+	Endereco
+	Telefone
 	Cargo
 	CargaHorariaSemanal
 	
 ===============
 Medico
-
-
+	Cod
+	CREME-RS
+	Matricula
+	Nome
+	Horario
+		Chegado
+		Saida
+--------------------------------	
 Dentista
-
-
-Auxiliar de Enfermagem
-
-
+	Cod
+	CRO-RS
+	Matricula
+	Nome
+	Horario
+		Chegado
+		Saida
+---------------------------------
+Tecnico/Auxiliar de Enfermagem
+	Cod
+	COREN-RS
+	Matricula
+	Nome
+	Horario
+		Chegado
+		Saida
+-----------------------------------
 Enfermeiro
-
-
+	Cod
+	COREN-RS
+	Matricula
+	Nome
+	Horario
+		Chegado
+		Saida
+------------------------------
 Porteiro
-
-
+	Cod
+	Nome
+	Horario
+		Chegado
+		Saida
+--------------------------
 Guarda
-
-
-Chefe
-=================
+	Cod
+	Nome
+	Horario
+		Chegado
+		Saida
+-------------------------
+Recepcao
+	Cod
+	Nome
+	Horario
+		Chegado
+		Saida
+-----------------------------
+Chefe/Coordenador
+	Cod
+	Nome
+	Horario
+		Chegado
+		Saida
+-------------------------
+Auxiliares de Limpeza
+	Cod
+	Nome
+	Horario
+		Chegado
+		Saida
+		
+================
 
 Controle de Ferias
 	Nome do Funcionario
 	Periodo
-	
+		DataInicio
+		DataFinal
+---------------------------	
 Controle de Faltas
 	Nome do Funcionario
 	DataFalta
+----------------------------	
+Controle de Folgas
+	Nome do Funcionario
+	Periodo
+		DataInicio
+		DataFinal
+----------------------------		
+Controle de Licenças Medicas
+	Nome do Funcionario
+	Periodo
+		DataInicio
+		DataFinal
+	
+	== Pode ter licença medica com tempo indeterminado
+-------------------------------------------------------	
+Pedidos de Ferias/Folga
+	Nome do Funcionario
+	Periodo
+		DataInicio
+		DataFinal
+	
+	== Só terá o administrador(Chefe/Coordenador) está opção
+	Opçcao
+		Sim
+		Não
+--------------------------------------------------------------	
