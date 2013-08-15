@@ -1,16 +1,26 @@
 Controle de Funcionario
 
-Funcionario
-	Cod
+-- Funcionario --	
+	Cod	
 	Nome
+	RG
+	CPF
 	DataNascimento
+	NomeMae
 	Endereco
+	CEP
 	Telefone
+	Email
+	Conselho de Classe
+	Matricula
+	Secretaria   == SECRETARIA MUNICIPAL DE SAUDE(SMS) ==
 	Cargo
+	Funcao
 	CargaHorariaSemanal
 	
-===============
-Medico
+== CARGOS ==
+
+-- Medico --
 	Cod
 	CREME-RS
 	Matricula
@@ -18,103 +28,151 @@ Medico
 	Horario
 		Chegado
 		Saida
+		
+		== FUNCAO ==
+			Pediatra
+			Clinico
+			Ginecologista
 --------------------------------	
-Dentista
+
+-- Dentista -- 
 	Cod
 	CRO-RS
 	Matricula
 	Nome
 	Horario
-		Chegado
+		Chegada
 		Saida
+		
+		== FUNCAO ==
+			Cirurgiao Dentista
+			Buco Facial
+			Auxiliar de Odontologia
 ---------------------------------
-Tecnico/Auxiliar de Enfermagem
+
+-- Tecnico/Auxiliar de Enfermagem --
 	Cod
 	COREN-RS
 	Matricula
 	Nome
 	Horario
-		Chegado
+		Chegada
 		Saida
 -----------------------------------
-Enfermeiro
+
+-- Enfermeiro --
 	Cod
 	COREN-RS
 	Matricula
 	Nome
 	Horario
-		Chegado
+		Chegada
 		Saida
 ------------------------------
-Porteiro
+
+-- Recepcao --
+	Cod
+	Nome
+	Horario
+		Chegada
+		Saida
+-----------------------------
+
+-- Coordenador --
+	Cod
+	Nome
+	Horario
+		Chegada
+		Saida
+		
+		== FUNCAO ==
+			Principal
+			Vice
+------------------------------
+
+-- Estagiario --
+	Cod
+	Nome
+	Horario
+		Chegada
+		Saida
+------------------------------
+	-- TERCEIRIZADOS --
+	Cod
+	Firma
+	CNPJ
+	EndereCo
+	CEP
+	Telefone
+	Email
+	
+-- Portaria --
 	Cod
 	Nome
 	Horario
 		Chegado
 		Saida
 --------------------------
-Guarda
+
+-- Vigilancia --
 	Cod
 	Nome
 	Horario
 		Chegado
 		Saida
+
 -------------------------
-Recepcao
-	Cod
-	Nome
-	Horario
-		Chegado
-		Saida
------------------------------
-Chefe/Coordenador
-	Cod
-	Nome
-	Horario
-		Chegado
-		Saida
--------------------------
-Auxiliares de Limpeza
+
+-- Higienizacao --
 	Cod
 	Nome
 	Horario
 		Chegado
 		Saida
 		
-================
+==============================
 
-Controle de Ferias
+-- Controle de Ferias --
 	Nome do Funcionario
 	Periodo
 		DataInicio
 		DataFinal
 ---------------------------	
-Controle de Faltas
+
+-- Controle de Faltas --
 	Nome do Funcionario
 	DataFalta
-----------------------------	
-Controle de Folgas
+----------------------------
+	
+-- Controle de Folgas --
 	Nome do Funcionario
 	Periodo
 		DataInicio
 		DataFinal
-----------------------------		
-Controle de Licenças Medicas
+----------------------------
+		
+-- Controle de Licencas Medicas --
 	Nome do Funcionario
 	Periodo
 		DataInicio
 		DataFinal
 	
-	== Pode ter licença medica com tempo indeterminado
+	== Pode ter licenca medica com tempo indeterminado, mas tem que renovar a cada dataFinal, pois cada licenca deve
+	ter no maximo 30 dias da dataInicio a dataFinal.
+	
 -------------------------------------------------------	
-Pedidos de Ferias/Folga
+
+-- Pedidos de Ferias/Folga -- 
 	Nome do Funcionario
 	Periodo
 		DataInicio
 		DataFinal
+		DataHorario 
+		
+			== Data e horario em que o pedido foi feito, ou tambem foi aceito ou nao pelo coordenador.
 	
-	== Só terá o administrador(Chefe/Coordenador) está opção
-	Opçcao
+			== So tera o administrador(Coordenador) esta opcao
+		Opcao
 		Sim
-		Não
+		Nao
 --------------------------------------------------------------	
