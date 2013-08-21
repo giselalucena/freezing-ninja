@@ -1,0 +1,113 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.2.2
+-- Dumped by pg_dump version 9.2.2
+-- Started on 2013-08-21 18:48:55
+
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 170 (class 3079 OID 11727)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 1928 (class 0 OID 0)
+-- Dependencies: 170
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 168 (class 1259 OID 16415)
+-- Name: pdr_contas; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE pdr_contas (
+    conta_id integer NOT NULL,
+    cpf character varying,
+    nome character varying,
+    numero character varying
+);
+
+
+ALTER TABLE public.pdr_contas OWNER TO postgres;
+
+--
+-- TOC entry 169 (class 1259 OID 16421)
+-- Name: pdr_movimentacoes; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE pdr_movimentacoes (
+    movimentacao_id integer NOT NULL,
+    valor money,
+    data timestamp with time zone,
+    conta integer
+);
+
+
+ALTER TABLE public.pdr_movimentacoes OWNER TO postgres;
+
+--
+-- TOC entry 1919 (class 0 OID 16415)
+-- Dependencies: 168
+-- Data for Name: pdr_contas; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY pdr_contas (conta_id, cpf, nome, numero) FROM stdin;
+1	12345678901	Dilma Roussef	ABCXXX001
+2	23456789012	Tarso Genro	ABCXYZ002
+3	34567890123	José Fortunati	ABCABC003
+4	123	qazwsx	abc
+\.
+
+
+--
+-- TOC entry 1920 (class 0 OID 16421)
+-- Dependencies: 169
+-- Data for Name: pdr_movimentacoes; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY pdr_movimentacoes (movimentacao_id, valor, data, conta) FROM stdin;
+3	R$ 120.000,00	2013-01-01 00:00:00-02	3
+1	R$ 1.300,00	2013-08-08 16:20:01-03	1
+4	R$ 200,00	2013-08-08 09:40:20.838-03	1
+2	R$ 230.000,12	2013-08-15 10:10:10-03	2
+\.
+
+
+--
+-- TOC entry 1927 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2013-08-21 18:48:56
+
+--
+-- PostgreSQL database dump complete
+--
+
