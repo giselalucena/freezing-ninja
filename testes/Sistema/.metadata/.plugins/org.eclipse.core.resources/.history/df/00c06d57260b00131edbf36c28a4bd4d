@@ -8,8 +8,7 @@ import java.util.Properties;
 
 public class JDBCTeste {
 
-	// http://jdbc.postgresql.org/documentation/head/connect.html
-	public static void main(String[] args) throws SQLException, FileNotFoundException, IOException {
+	public static void main(String[] args) throws SQLException {
 		//String url = "jdbc:postgresql://localhost:5432/Teste";
 		//String username = "postgres";
 		//String password = "senacrs";
