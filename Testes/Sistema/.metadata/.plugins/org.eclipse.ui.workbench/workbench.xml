@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="728" width="1024" x="75" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -17,7 +17,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -26,28 +28,18 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Hello.java" partName="Hello.java" path="C:/Users/Marta/Documents/GitHub/freezing-ninja/Testes/Sistema/Hello/src/Hello.java" title="Hello.java" tooltip="Hello/src/Hello.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Hello/src/Hello.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JDBCTeste.java" partName="JDBCTeste.java" path="C:/Users/Marta/Documents/GitHub/freezing-ninja/Testes/Sistema/JDBCTeste/src/JDBCTeste.java" title="JDBCTeste.java" tooltip="JDBCTeste/src/JDBCTeste.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JDBCTeste/src/JDBCTeste.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="97" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (1 item)"/>
+<category IMemento.internal.id="Warnings (1 item)"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -192,7 +184,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="right" ratio="0.8575269" ratioLeft="638" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
@@ -207,41 +199,18 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Hello/src/Hello.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JDBCTeste/src/JDBCTeste.java"/>
-</editors>
-<item historyLabel="Hello.java" index="0">
-<position info="not_deleted" x="162" y="0"/>
-</item>
-<item historyLabel="JDBCTeste.java" index="1">
-<position info="not_deleted" x="41" y="0"/>
-</item>
-<item historyLabel="Hello.java" index="0">
-<position/>
-</item>
-<item historyLabel="JDBCTeste.java" index="1">
-<position info="not_deleted" x="3" y="14"/>
-</item>
-<item historyLabel="Hello.java" index="0">
-<position info="not_deleted" x="18" y="0"/>
-</item>
-<item historyLabel="JDBCTeste.java" index="1">
-<position info="not_deleted" x="97" y="0"/>
-</item>
-<item historyLabel="Hello.java" index="0">
-<position info="not_deleted" x="3" y="0"/>
-</item>
-<item active="true" historyLabel="JDBCTeste.java" index="1">
-<position info="not_deleted" x="97" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -249,10 +218,26 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="teste.properties" tooltip="TestePojoDAO/teste.properties">
+<persistable path="/TestePojoDAO/teste.properties"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Movimentacao.java" tooltip="TestePojoDAO/src/testepojo/Movimentacao.java">
+<persistable path="/TestePojoDAO/src/testepojo/Movimentacao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Conta.java" tooltip="TestePojoDAO/src/testepojo/Conta.java">
+<persistable path="/TestePojoDAO/src/testepojo/Conta.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TesteDAO.java" tooltip="TestePojoDAO/src/testedao/TesteDAO.java">
+<persistable path="/TestePojoDAO/src/testedao/TesteDAO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="teste.properties" tooltip="JDBCTeste/teste.properties">
+<persistable path="/JDBCTeste/teste.properties"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JDBCTeste.java" tooltip="JDBCTeste/src/JDBCTeste.java">
 <persistable path="/JDBCTeste/src/JDBCTeste.java"/>
 </file>
