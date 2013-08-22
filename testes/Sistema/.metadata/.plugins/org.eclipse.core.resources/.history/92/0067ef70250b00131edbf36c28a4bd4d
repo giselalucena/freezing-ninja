@@ -1,8 +1,6 @@
 package teste;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
 
@@ -25,20 +23,9 @@ public class JDBCTeste {
 		//Connection db = DriverManager.getConnection(url, username, password);
 		System.out.println("Conectado!");
 		
-		String cpf = "123";
-		String cmd = "SELECT * FROM pdr_contas WHERE cpf = ?";
-		PreparedStatement st  = db.prepareStatement(cmd);
-		st.setString(1,cpf);
+		String cmd = "SELECT * FROM pdr_contas";
+		PrepareStatement st  = db.prepareStatement(cmd);
 		ResultSet rs = st.executeQuery();
-		
-			while(rs.next()){
-				System.out.println(rs.getString(1));
-				System.out.println(rs.getString("cpf"));
-				System.out.println(rs.getString(3));
-				System.out.println(rs.getString(4));
-				
-			}
-		
 		rs.close();
 		st.close();
 		

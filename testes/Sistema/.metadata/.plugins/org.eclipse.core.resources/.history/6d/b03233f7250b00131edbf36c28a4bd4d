@@ -30,7 +30,6 @@ public class JDBCTeste {
 		PreparedStatement st  = db.prepareStatement(cmd);
 		st.setString(1,cpf);
 		ResultSet rs = st.executeQuery();
-		
 			while(rs.next()){
 				System.out.println(rs.getString(1));
 				System.out.println(rs.getString("cpf"));
