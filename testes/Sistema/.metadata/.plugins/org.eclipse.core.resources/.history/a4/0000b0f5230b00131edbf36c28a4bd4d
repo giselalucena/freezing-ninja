@@ -22,7 +22,5 @@ public class JDBCTeste {
 		
 		//Connection db = DriverManager.getConnection(url, username, password);
 		System.out.println("Conectado!");
-		
-		String cmd = 
 	}
 }
