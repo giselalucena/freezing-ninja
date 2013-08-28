@@ -1,0 +1,33 @@
+	========= COMANDOS DE APLICAÇÃO ==========
+
+== TABELA DE CONTAS ==
+
+INSERT INTO pdr_contas VALUES (1, '12345678901', 'Dilma Roussef', 'ABCXXX001');
+INSERT INTO pdr_contas VALUES (2, '23456789012', 'Tarso Genro', 'ABCXYZ002');
+INSERT INTO pdr_contas VALUES (3, '34567890123', 'José Fortunati', 'ABCABC003');
+INSERT INTO pdr_contas VALUES (4, '123', 'qazwsx', 'abc');
+
+-- CRIAÇÃO DE CONTA --
+INSERT INTO pdr_contas(cpf, nome, numero) VALUES ('123', 'Raul Pont', 'abc');
+
+-- ATUALIZAÇÃO DO CADASTRO --
+UPDATE pdr_contas SET nome='qazwsx' WHERE conta_id= 4 
+
+-- CONSULTAR DADOS DA CONTA POR CPF OU NÚMERO DA CONTA --
+SELECT * FROM pdr_contas WHERE cpf= '123'
+SELECT * FROM pdr_contas WHERE  numero= 'abc'
+
+
+
+== TABELAS DE MOVIMENTAÇÕES ==
+
+INSERT INTO pdr_movimentacoes VALUES (3, 'R$ 120.000,00', '2013-01-01 00:00:00-02', 3);
+INSERT INTO pdr_movimentacoes VALUES (1, 'R$ 1.300,00', '2013-08-08 16:20:01-03', 1);
+INSERT INTO pdr_movimentacoes VALUES (4, 'R$ 200,00', '2013-08-08 09:40:20.838-03', 1);
+INSERT INTO pdr_movimentacoes VALUES (2, 'R$ 230.000,12', '2013-08-15 10:10:10-03', 2);
+
+-- REGISTRO DE OPERAÇÃO BANCÁRIA --
+INSERT INTO pdr_movimentacoes(data, valor, conta) VALUES('now', 200.00, 1);
+
+-- CONSULTAR EXTRATO DE CONTA --
+SELECT * FROM pdr_movimentacoes WHERE conta = 1;
