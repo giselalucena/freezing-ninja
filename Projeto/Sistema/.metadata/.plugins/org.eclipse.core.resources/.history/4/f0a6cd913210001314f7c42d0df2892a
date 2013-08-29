@@ -1,0 +1,19 @@
+package projeto.pojo;
+
+public class Funcionario {
+		private String nome;		
+		private int rg;
+		private int cpf;
+		//dataNasc date;
+		private String nomeMae;
+		private String endereco;
+		private int cep;
+		private int telefone;
+		private String email;
+		private int conselho;
+		private int matricula;
+		private int secretaria;
+		private int cargo;
+		private int funcao;
+		private int cargaHorariaSemanal; 
+}

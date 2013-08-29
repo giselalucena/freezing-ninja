@@ -1,0 +1,13 @@
+-- DEFINIÇÃO DA APLICAÇÃO --
+
+Projeto de Controle de Funcionário
+
+	- Controle de Férias
+	- Controle de Folgas
+	- Controle de Faltas
+	- Controle de Licenças Médicas
+
+-- SISTEMAS SIMILARES --
+
+-
+

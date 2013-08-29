@@ -1,0 +1,122 @@
+package projeto.dao;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Properties;
+
+import projeto.pojo.Funcionario;
+
+public class ProjetoDAO {
+
+	public Funcionario findFuncByCPF(int cpf) {
+		Funcionario func = null;
+		String cmd = "SELECT * FROM funcionario WHERE cpf= ?";
+
+		Connection db = null;
+		PreparedStatement st = null;
+		ResultSet rs = null;
+
+		try {
+			// abrir conexão
+			Properties props = new Properties();
+			props.load(new FileInputStream("projeto.properties"));
+			String url = props.getProperty("url");
+
+			db = DriverManager.getConnection(url, props);
+
+			st = db.prepareStatement(cmd);
+			st.setInt(3, cpf);
+			rs = st.executeQuery();
+
+			while (rs.next()) {
+				// copiar dados para POJO
+				String nome = rs.getString(1);
+				String rg = rs.getString(2);
+				String cpf = rs.getString("cpf");
+				String nomeMae = rs.getString(4);
+				String endereco = rs.getString(5);
+				String cep = rs.getString(6);
+				String telefone = rs.geString(7);
+				String email = rs.getString(8);
+				String conselho= rs.getString(9);
+				String matricula= rs.geString(10);
+				int secretaria= rs.getInt(11);
+				int cargo= rs.getInt(12);
+				int funcao= rs.getInt(13);
+				int cargaHorariaSemanal = rs.getInt(14);
+				func = new Funcionario(nome,rg,cpf,nomeMae,endereco,cep,telefone,email,conselho,matricula,secretaria,cargo,funcao,cargaHorariaSemanal);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (db != null) {
+					db.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return func;
+	}
+
+	public void insertFunc(Funcionario func) {
+		String cmd = "INSERT INTO funcionario (nome,rg,cpf,nomeMae,endereco,cep,telefone,email,conselho,matricula,secretaria,cargo,funcao,cargaHorariaSemanal) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		Connection db = null;
+		PreparedStatement st = null;
+
+		try {
+			// ABRIR CONEXÃO
+			Properties props = new Properties();
+			props.load(new FileInputStream("projeto.properties"));
+			String url = props.getProperty("url");
+
+			db = DriverManager.getConnection(url, props);
+
+			st = db.prepareStatement(cmd);
+			st.setString(1, func.getNome());
+			st.setString(2, func.getRg());
+			st.setString(3, func.getCpf());
+			st.setString(4, func.getNomeMae());
+			st.setString(5, func.getEndereco());
+			st.setString(6, func.getCep());
+			st.setString(7, func.getTelefone());
+			st.setString(8, func.getEmail());
+			st.setString(9, func.getConselho());
+			st.setString(10, func.getMatricula());
+			st.setInt(11, func.getCargo());
+			st.setInt(12, func.getFuncao());
+			st.setInt(13,func.getSecretaria());
+			st.setInt(14,func.getCargaHorariaSemanal());
+			int r = st.executeUpdate();
+
+			if (r != 1) {
+				throw new RuntimeException("ERRO AO INSERIR O FUNCIONÁRIO!");
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (st != null) {
+					st.close();
+				}
+				if (db != null) {
+					db.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+}
