@@ -1,0 +1,149 @@
+ -- TABELA CARGO --
+INSERT INTO cargo (nome) VALUES ('Médico(a)');
+INSERT INTO cargo (nome) VALUES ('Técnico/Auxiliar de Enfermagem');
+INSERT INTO cargo (nome) VALUES ('Enfermeiro(a)');
+INSERT INTO cargo (nome) VALUES ('Dentista');
+INSERT INTO cargo (nome) VALUES ('Auxiliar de Dentista');
+INSERT INTO cargo (nome) VALUES ('Recepção');
+INSERT INTO cargo (nome) VALUES ('Estágiario');
+INSERT INTO cargo (nome) VALUES ('Terceirizados');
+
+
+-- TABELA FUNÇÃO --
+INSERT INTO funcao (nome) VALUES ('Pediatra');
+INSERT INTO funcao (nome) VALUES ('Ginecologista');
+INSERT INTO funcao (nome) VALUES ('Clínico');
+INSERT INTO funcao (nome) VALUES ('Cirurgião Dentista');
+INSERT INTO funcao (nome) VALUES ('Auxiliar de Odontologia');
+INSERT INTO funcao (nome) VALUES ('Técnico/Auxiliar de Enfermagem');
+INSERT INTO funcao (nome) VALUES ('Enfermeiro(a)');
+INSERT INTO funcao (nome) VALUES ('Recepcionista');
+INSERT INTO funcao (nome) VALUES ('Assistente Administrativo');
+INSERT INTO funcao (nome) VALUES ('Estágiario');
+INSERT INTO funcao (nome) VALUES ('Portaria');
+INSERT INTO funcao (nome) VALUES ('Vigilância');
+INSERT INTO funcao (nome) VALUES ('Higienização');
+
+
+
+-- TABELA TURNO --
+INSERT INTO turno (nome) VALUES ('Manhã');
+INSERT INTO turno (nome) VALUES ('Tarde');
+INSERT INTO turno (nome) VALUES ('Noite');
+
+
+
+INSERT INTO firmasTerceirazadas (nome,cnpj,endereco,cep,telefone,email) VALUES ();
+INSERT INTO firmasTerceirazadas (nome,cnpj,endereco,cep,telefone,email) VALUES ();
+INSERT INTO firmasTerceirazadas (nome,cnpj,endereco,cep,telefone,email) VALUES ();
+INSERT INTO firmasTerceirazadas (nome,cnpj,endereco,cep,telefone,email) VALUES ();
+INSERT INTO firmasTerceirazadas (nome,cnpj,endereco,cep,telefone,email) VALUES ();
+
+
+INSERT INTO secretaria (nome) VALUES ('Secretária Municipal de Saúde');
+INSERT INTO secretaria (nome) VALUES ('CATA Contrado');
+
+
+INSERT INTO funcionario (nome,rg,cpf,dataNasc,nomeMae,endereco,cep,
+	telefone,email,conselho,matricula,secretaria,cargo,funcao,
+		cargaHorariaSemanal) VALUES ('Maria de Oliveira',209049594,30928473845,
+			'02/05/1979','Teresa de Oliveira','Rua Auxiliadora,234',20934568,'05133782049',
+				'maria_oliveira@hotmail.com',78542,7421063,1,2,6,20);
+INSERT INTO funcionario (nome,rg,cpf,dataNasc,nomeMae,endereco,cep,
+	telefone,email,conselho,matricula,secretaria,cargo,funcao,
+		cargaHorariaSemanal) VALUES ('João da Silva',482479658,17638498572,
+			'09/06/1980','Ana da Silva', 'Av. Sertório, 1598',26895876,'05199748264',
+				'jSilva@gmail.com',78349,7854134,1,1,3,20);
+INSERT INTO funcionario (nome,rg,cpf,dataNasc,nomeMae,endereco,cep,
+	telefone,email,conselho,matricula,secretaria,cargo,funcao,
+		cargaHorariaSemanal) VALUES ('Ana Souza de Lima',487597135,79854731469,
+		'12/12/1990','Vera Souza','Rua Carlos Gomes, 154',17854967,'05187965874',
+			'anaSouza90outlook.com',265478,98754287,1,3,7,20);
+
+
+
+INSERT INTO medico (creme,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+INSERT INTO medico (creme,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO dentista (cro,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+INSERT INTO dentista (cro,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO auxDentista (cro,matricula,nome,turno,horaChega,horaSaida) VALUES ();
+INSERT INTO auxDentista (cro,matricula,nome,turno,horaChega,horaSaida) VALUES ();
+
+
+INSERT INTO tecAuxEnfermagem (coren,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+INSERT INTO tecAuxEnfermagem (coren,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO enfermeiro (coren,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+INSERT INTO enfermeiro (coren,matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO portaria (matricula,nome,turno,horaChegada,horaSaida,firma) VALUES ();
+INSERT INTO portaria (matricula,nome,turno,horaChegada,horaSaida,firma) VALUES ();
+
+
+INSERT INTO vigilancia (matricula,nome,turno,horaChegada,horaSaida,firma) VALUES ();
+INSERT INTO vigilancia (matricula,nome,turno,horaChegada,horaSaida,firma) VALUES ();
+
+
+INSERT INTO recepcionista (matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+INSERT INTO recepcionista (matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO estagiario (matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+INSERT INTO estagiario (matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO assAdministrativo (matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+INSERT INTO assAdministrativo (matricula,nome,turno,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO coordenador (matricula,nome,horaChegada,horaSaida) VALUES ();
+INSERT INTO coordenador (matricula,nome,horaChegada,horaSaida) VALUES ();
+
+
+INSERT INTO higienizacao (matricula,nome,turno,horaChegada,horaSaida,firma) VALUES ();
+INSERT INTO higienizacao (matricula,nome,turno,horaChegada,horaSaida,firma) VALUES ();
+
+
+INSERT INTO controleLicMedicas (nome,dataInicio,dataFinal) VALUES ();
+INSERT INTO controleLicMedicas (nome,dataInicio,dataFinal) VALUES ();
+
+INSERT INTO pedido (nome) VALUES ('Férias');
+INSERT INTO pedido (nome) VALUES ('Folga');
+
+
+INSERT INTO pedidoFerFolgasFunc (nome,codPedido,dataInicio,dataFinal,dataHorario) VALUES ('João da Silva','09/08/2013','09/30/2013','now');
+INSERT INTO pedidoFerFolgasFunc (nome,codPedido,dataInicio,dataFinal,dataHorario) VALUES ('Maria de Oliveira','10/02/2013','10/20/2013','now');
+
+
+INSERT INTO pedidoFerFolgasCoord (codPedidoFunc,nome,dataInicio,dataHorario,
+	opcao,dataHorario) VALUES (2,'Maria de Oliveira','10/02/2013','10/20/2013',TRUE,'now');
+INSERT INTO pedidoFerFolgasCoord (codPedidoFunc,nome,dataInicio,dataHorario,
+	opcao,dataHorario) VALUES (1,'João da Silva','09/08/2013','09/30/2013',FALSE,'now');
+
+
+INSERT INTO controleFerias (nome,dataInicio,dataFinal) VALUES ();
+INSERT INTO controleFerias (nome,dataInicio,dataFinal) VALUES ();
+
+
+INSERT INTO controleFaltas (nome,dataFalta) VALUES ();
+INSERT INTO controleFaltas (nome,dataFalta) VALUES ();
+
+
+INSERT INTO controleFolgas (nome,dataInicio,dataFinal) VALUES ();
+INSERT INTO controleFolgas (nome,dataInicio,dataFinal) VALUES ();
+
+
+
+--- SELECT ---
+SELECT * FROM funcionario WHERE cpf = 79854731469;
+SELECT * FROM funcionario WHERE conselho = 78349;
+SELECT * FROM funcionario WHERE matricula = 7421063;
+
+
+

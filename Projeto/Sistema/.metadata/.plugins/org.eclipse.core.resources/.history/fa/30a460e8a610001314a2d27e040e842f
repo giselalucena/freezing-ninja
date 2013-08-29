@@ -1,0 +1,67 @@
+package projeto.pojo;
+
+public class Funcionario {
+		private String nome;		
+		private String rg;
+		private int cpf;
+		//dataNasc date;
+		private String nomeMae;
+		private String endereco;
+		private String cep;
+		private String telefone;
+		private String email;
+		private String conselho;
+		private String matricula;
+		private int secretaria;
+		private int cargo;
+		private int funcao;
+		private int cargaHorariaSemanal; 
+
+public Funcionario(String nome,String rg,String cpf, String nomeMae, String endereco, String cep, String telefone, 
+		String email, String conselho, String matricula, int secretaria, int cargo, int funcao, int cargaHorariaSemanal){
+	super();
+	this.nome = nome;
+	this.rg = rg;
+	this.cpf = cpf;
+	this.nomeMae = nomeMae;
+	this.endereco = endereco;
+	this.cep = cep;
+	this.telefone = telefone;
+	this.email = email;
+	this.conselho = conselho;
+	this.matricula = matricula;
+	this.secretaria = secretaria;
+	this.cargo = cargo;
+	this.funcao = funcao;
+	this.cargaHorariaSemanal = cargaHorariaSemanal;
+	
+}
+public Funcionario(String nome,String rg,String cpf, String nomeMae, String endereco,String cep, String telefone, String email, 
+		String matricula, int secretaria, int cargo, int funcao, int cargaHorariaSemanal){
+	super();
+	this.nome = nome;
+	this.rg = rg;
+	this.cpf = cpf;
+	this.nomeMae = nomeMae;
+	this.endereco = endereco;
+	this.cep = cep;
+	this.telefone = telefone;
+	this.email = email;
+	this.matricula = matricula;
+	this.secretaria = secretaria;
+	this.cargo = cargo;
+	this.funcao = funcao;
+	this.cargaHorariaSemanal = cargaHorariaSemanal;
+	
+}
+		
+		
+		
+		@Override
+		public String toString() {
+			return String.format(
+					"Funcionario [nome=%s, rg=%s, cpf=%s, nomeMae=%s, endereco=%s, cep=%s, telefone=%s, email=%s, conselho=%s, matricula=%s, secretaria=%s, cargo=%s,funcao = %s, cargaHorariaSemanal=%s]", 
+					nome,rg, cpf, nomeMae,endereco,cep,telefone,email,conselho,matricula,secretaria,cargo,funcao,cargaHorariaSemanal);
+		}
+		 
+}

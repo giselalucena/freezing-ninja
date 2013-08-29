@@ -1,0 +1,64 @@
+package projeto.pojo;
+
+public class Funcionario {
+		private String nome;		
+		private int rg;
+		private int cpf;
+		//dataNasc date;
+		private String nomeMae;
+		private String endereco;
+		private int cep;
+		private int telefone;
+		private String email;
+		private int conselho;
+		private int matricula;
+		private int secretaria;
+		private int cargo;
+		private int funcao;
+		private int cargaHorariaSemanal; 
+		
+		
+		
+		public String getNome() {
+			return nome;
+		}
+		public int getRg() {
+			return rg;
+		}
+		public int getCpf() {
+			return cpf;
+		}
+		public String getNomeMae() {
+			return nomeMae;
+		}
+		public String getEndereco() {
+			return endereco;
+		}
+		public int getCep() {
+			return cep;
+		}
+		public int getTelefone() {
+			return telefone;
+		}
+		public String getEmail() {
+			return email;
+		}
+		public int getConselho() {
+			return conselho;
+		}
+		public int getMatricula() {
+			return matricula;
+		}
+		public int getSecretaria() {
+			return secretaria;
+		}
+		public int getCargo() {
+			return cargo;
+		}
+		public int getFuncao() {
+			return funcao;
+		}
+		public int getCargaHorariaSemanal() {
+			return cargaHorariaSemanal;
+		}
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+F:\ADS\4º Semestre\Laboratório de Programação III\Projeto\Sistema\.metadata\.plugins\org.eclipse.jdt.core
+2443234116.index
+3331617977.index
+1498219845.index
+1697886153.index
