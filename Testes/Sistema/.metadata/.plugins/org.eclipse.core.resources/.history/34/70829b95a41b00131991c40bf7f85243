@@ -1,0 +1,27 @@
+package start;
+
+import misc.ActionDemo;
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
+public class SobreAction {
+	
+	public SobreAction() {
+		super();
+        putValue(SHORT_DESCRIPTION, "curta");		
+        putValue(LONG_DESCRIPTION, "descrição longa");		
+        putValue(NAME, "nome");	
+        java.net.URL imageURL = ActionDemo.class.getResource("left.gif");
+        putValue(SMALL_ICON, new ImageIcon(imageURL ));	
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		System.out.println("Apertaram!");
+	}
+
+}

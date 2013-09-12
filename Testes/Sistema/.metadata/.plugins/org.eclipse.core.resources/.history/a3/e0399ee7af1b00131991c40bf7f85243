@@ -1,0 +1,23 @@
+package start;
+
+import misc.ActionDemo;
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
+public class SobreAction extends AbstractAction {
+	
+	public SobreAction() {
+		super("Sobre");
+      
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		System.out.println("Sobre");
+	}
+
+}

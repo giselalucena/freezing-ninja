@@ -68,24 +68,6 @@ public class HelloWorldSwing {
         
         //frame.getContentPane().add(label);
         
-        JMenuBar mb = new JMenuBar();
-        frame.setJMenuBar(mb);
-        
-        JMenu arquivo = new JMenu("Arquivo");
-        mb.add(arquivo);
-        
-        JMenu ajuda = new JMenu("Ajuda");
-        mb.add(ajuda);
-        
-        //JMenuItem sair = new JMenuItem("Sair");
-        JMenuItem sair = new JMenuItem(new SairAction());
-        arquivo.add(sair);
-        
-       // JMenuItem sobre = new JMenuItem("Sobre");
-        JMenuItem sobre = new JMenuItem(new SobreAction());
-        ajuda.add(sobre);
-        
-        
         JPanel panel = new JHelloPanel();
         
         frame.getContentPane().add(panel);

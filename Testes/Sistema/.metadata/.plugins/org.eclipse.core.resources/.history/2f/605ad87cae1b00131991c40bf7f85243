@@ -1,19 +1,23 @@
 package start;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 
 import javax.swing.*;
-
-
+ 
 
 public class JHelloPanel extends JPanel{
 	
 	private static final long serialVersionUID = 1L;
 	
 	private JTextField textField;
-
-
+	
+	private Conta conta;
+	
+	public Conta getConta(){
+		return new Conta(textField.getText());
+	}
+	
+	
 	public JHelloPanel(){
 		 //Add the ubiquitous "Hello World" label.
 		 JLabel label = new JLabel("Hello World");
@@ -27,7 +31,7 @@ public class JHelloPanel extends JPanel{
        // JButton button = new JButton("Press me!");
         JButton button = new JButton(new JHelloAction());
         button.setToolTipText("Aperte este botão");
-        button.setMnemonic(KeyEvent.VK_C);
+        //button.setMnemonic();
         
         add(button);
 		

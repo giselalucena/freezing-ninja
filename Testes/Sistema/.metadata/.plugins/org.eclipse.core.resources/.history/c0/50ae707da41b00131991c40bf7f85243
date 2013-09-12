@@ -1,0 +1,8 @@
+package start;
+import misc.ActionDemo;
+
+public class SairAction extends AbstractAction {
+	
+	
+
+}
