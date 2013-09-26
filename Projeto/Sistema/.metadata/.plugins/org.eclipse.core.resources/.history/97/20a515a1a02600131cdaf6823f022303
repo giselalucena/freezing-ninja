@@ -1,0 +1,64 @@
+package projeto.jfc;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
+public class Menu extends JFrame {
+
+	private JPanel contentPane;
+	private final SairAction sairAction = new SairAction();
+	private final SobreAction sobreAction = new SobreAction((JFrame) null);
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu frame = new Menu();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Menu() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnArquivo = new JMenu("Arquivo");
+		menuBar.add(mnArquivo);
+		
+		JMenuItem mntmSair = new JMenuItem("Sair");
+		mntmSair.setAction(sairAction);
+		mnArquivo.add(mntmSair);
+		
+		JMenu mnAjuda = new JMenu("Ajuda");
+		menuBar.add(mnAjuda);
+		
+		JMenuItem mntmSobre = new JMenuItem("Sobre");
+		mntmSobre.setAction(sobreAction);
+		mnAjuda.add(mntmSobre);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+	}
+
+}

@@ -13,7 +13,7 @@ public class SobreAction extends AbstractAction {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	
-	public SobreAction() {
+	public SobreAction(JFrame frame) {
 		super("Sobre");
 		this.frame = frame;
       

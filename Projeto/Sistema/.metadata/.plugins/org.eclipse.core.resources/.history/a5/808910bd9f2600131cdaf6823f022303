@@ -1,0 +1,25 @@
+package projeto.jfc;
+
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.JOptionPane;
+
+public class CadastroFuncionarioAction extends AbstractAction {
+	
+	private static final long serialVersionUID = 1L;
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		System.out.println("Cadastro Funcionário");
+		
+	}
+
+}

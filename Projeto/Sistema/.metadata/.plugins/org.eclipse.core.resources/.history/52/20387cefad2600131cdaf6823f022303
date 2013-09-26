@@ -1,0 +1,558 @@
+package projeto.jfc;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import java.awt.FlowLayout;
+import javax.swing.JTable;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JButton;
+
+import projeto.pojo.Funcionario;
+
+public class CadastroFuncionarioPanel extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+	private JTextField textFieldNome;
+	private JTextField textFieldRg;
+	private JTextField textFieldCpf;
+	private JTextField textFieldDataNasc;
+	private JTextField textFieldNomeMae;
+	private JTextField textFieldEndereco;
+	private JTextField textFieldCep;
+	private JTextField textFieldTelefone;
+	private JTextField textFieldEmail;
+	private JTextField textFieldConselho;
+	private JTextField textFieldMatricula;
+	private JTextField textFieldSecretaria;
+	private JTextField textFieldCargo;
+	private JTextField textFieldFuncao;
+	private JTextField textFieldCargaHorariaSemanal;
+	private final CadastroFuncionarioCadastrarAction cadastroFuncionarioCadastrarAction = new CadastroFuncionarioCadastrarAction(
+			(CadastroFuncionarioPanel) null);
+	private final CadastroFuncionarioCancelarAction cadastroFuncionarioCancelarAction = new CadastroFuncionarioCancelarAction(
+			(CadastroFuncionarioPanel) null);
+
+	/**
+	 * 
+	 * @return
+	 */
+	public Funcionario getFuncionario() {
+		return new Funcionario(nome.getText(), rg.getText(), cpf.getText(),
+				dataNasc.getText(), nomeMae.getText(), endereco.getText(),
+				cep.getText(), telefone.getText(), email.getText(),
+				conselho.getText(), matricula.getText(), secretaria.getText(),
+				cargo.getText(), funcao.getText(),
+				cargaHorariaSemanal.getText());
+	}
+
+	public void clear() {
+		nome.setText("");
+		rg.setText("");
+		cpf.setText("");
+		dataNasc.setText("");
+		nomeMae.setText("");
+		endereco.setText("");
+		cep.setText("");
+		telefone.setText("");
+		email.setText("");
+		conselho.setText("");
+		matricula.setText("");
+		secretaria.setText("");
+		cargo.setText("");
+		funcao.setText("");
+		cargaHorariaSemanal.setText("");
+	}
+
+	/**
+	 * Create the panel.
+	 */
+	public CadastroFuncionarioPanel() {
+
+		JLabel lblNome = new JLabel("Nome:");
+
+		textFieldNome = new JTextField();
+		textFieldNome.setColumns(10);
+
+		JLabel lblRg = new JLabel("RG:");
+
+		textFieldRg = new JTextField();
+		textFieldRg.setColumns(10);
+
+		JLabel lblCpf = new JLabel("CPF:");
+
+		textFieldCpf = new JTextField();
+		textFieldCpf.setColumns(10);
+
+		JLabel lblDataNasc = new JLabel("Data de Nascimento:");
+
+		textFieldDataNasc = new JTextField();
+		textFieldDataNasc.setColumns(10);
+
+		JLabel lblNomeMae = new JLabel("Nome da Mãe:");
+
+		textFieldNomeMae = new JTextField();
+		textFieldNomeMae.setColumns(10);
+
+		JLabel lblEndereco = new JLabel("Endereço:");
+
+		textFieldEndereco = new JTextField();
+		textFieldEndereco.setColumns(10);
+
+		JLabel lblCep = new JLabel("CEP:");
+
+		textFieldCep = new JTextField();
+		textFieldCep.setColumns(10);
+
+		JLabel lblTelefone = new JLabel("Telefone:");
+
+		textFieldTelefone = new JTextField();
+		textFieldTelefone.setColumns(10);
+
+		JLabel lblEmail = new JLabel("E-mail:");
+
+		textFieldEmail = new JTextField();
+		textFieldEmail.setColumns(10);
+
+		JLabel lblConselho = new JLabel("Conselho:");
+
+		textFieldConselho = new JTextField();
+		textFieldConselho.setColumns(10);
+
+		JLabel lblMatricula = new JLabel("Matrícula:");
+
+		textFieldMatricula = new JTextField();
+		textFieldMatricula.setColumns(10);
+
+		JLabel lblSecretaria = new JLabel("Secretária:");
+
+		textFieldSecretaria = new JTextField();
+		textFieldSecretaria.setColumns(10);
+
+		JLabel lblCargo = new JLabel("Cargo:");
+
+		textFieldCargo = new JTextField();
+		textFieldCargo.setColumns(10);
+
+		JLabel lblFuncao = new JLabel("Função:");
+
+		textFieldFuncao = new JTextField();
+		textFieldFuncao.setColumns(10);
+
+		JLabel lblCargaHorariaSemanal = new JLabel("Carga Horária Semanal:");
+
+		textFieldCargaHorariaSemanal = new JTextField();
+		textFieldCargaHorariaSemanal.setColumns(10);
+
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setAction(cadastroFuncionarioCadastrarAction);
+
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setAction(cadastroFuncionarioCancelarAction);
+		
+		GroupLayout groupLayout = new GroupLayout(this);
+		groupLayout
+				.setHorizontalGroup(groupLayout
+						.createParallelGroup(Alignment.LEADING)
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addGroup(
+																groupLayout
+																		.createParallelGroup(
+																				Alignment.LEADING,
+																				false)
+																		.addGroup(
+																				groupLayout
+																						.createSequentialGroup()
+																						.addGroup(
+																								groupLayout
+																										.createParallelGroup(
+																												Alignment.LEADING)
+																										.addComponent(
+																												lblNome)
+																										.addComponent(
+																												lblRg))
+																						.addPreferredGap(
+																								ComponentPlacement.UNRELATED)
+																						.addGroup(
+																								groupLayout
+																										.createParallelGroup(
+																												Alignment.LEADING,
+																												false)
+																										.addComponent(
+																												textFieldNome,
+																												GroupLayout.PREFERRED_SIZE,
+																												362,
+																												GroupLayout.PREFERRED_SIZE)
+																										.addGroup(
+																												groupLayout
+																														.createSequentialGroup()
+																														.addComponent(
+																																textFieldRg,
+																																GroupLayout.PREFERRED_SIZE,
+																																150,
+																																GroupLayout.PREFERRED_SIZE)
+																														.addGap(18)
+																														.addComponent(
+																																lblCpf)
+																														.addPreferredGap(
+																																ComponentPlacement.UNRELATED)
+																														.addComponent(
+																																textFieldCpf))))
+																		.addGroup(
+																				groupLayout
+																						.createSequentialGroup()
+																						.addComponent(
+																								lblDataNasc)
+																						.addGap(10)
+																						.addComponent(
+																								textFieldDataNasc,
+																								GroupLayout.PREFERRED_SIZE,
+																								102,
+																								GroupLayout.PREFERRED_SIZE))
+																		.addGroup(
+																				groupLayout
+																						.createSequentialGroup()
+																						.addComponent(
+																								lblNomeMae)
+																						.addGap(10)
+																						.addComponent(
+																								textFieldNomeMae))
+																		.addGroup(
+																				groupLayout
+																						.createSequentialGroup()
+																						.addComponent(
+																								lblEndereco)
+																						.addGap(10)
+																						.addComponent(
+																								textFieldEndereco)))
+														.addGroup(
+																groupLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				lblCep)
+																		.addGap(18)
+																		.addComponent(
+																				textFieldCep,
+																				GroupLayout.PREFERRED_SIZE,
+																				100,
+																				GroupLayout.PREFERRED_SIZE))
+														.addGroup(
+																groupLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				lblTelefone)
+																		.addPreferredGap(
+																				ComponentPlacement.UNRELATED)
+																		.addComponent(
+																				textFieldTelefone,
+																				GroupLayout.PREFERRED_SIZE,
+																				GroupLayout.DEFAULT_SIZE,
+																				GroupLayout.PREFERRED_SIZE))
+														.addGroup(
+																groupLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				lblEmail)
+																		.addPreferredGap(
+																				ComponentPlacement.UNRELATED)
+																		.addComponent(
+																				textFieldEmail,
+																				GroupLayout.PREFERRED_SIZE,
+																				260,
+																				GroupLayout.PREFERRED_SIZE))
+														.addGroup(
+																groupLayout
+																		.createSequentialGroup()
+																		.addGroup(
+																				groupLayout
+																						.createParallelGroup(
+																								Alignment.TRAILING,
+																								false)
+																						.addGroup(
+																								Alignment.LEADING,
+																								groupLayout
+																										.createSequentialGroup()
+																										.addComponent(
+																												lblFuncao)
+																										.addPreferredGap(
+																												ComponentPlacement.RELATED)
+																										.addComponent(
+																												textFieldFuncao))
+																						.addGroup(
+																								Alignment.LEADING,
+																								groupLayout
+																										.createSequentialGroup()
+																										.addComponent(
+																												lblCargo)
+																										.addPreferredGap(
+																												ComponentPlacement.UNRELATED)
+																										.addComponent(
+																												textFieldCargo))
+																						.addGroup(
+																								Alignment.LEADING,
+																								groupLayout
+																										.createSequentialGroup()
+																										.addComponent(
+																												lblSecretaria)
+																										.addPreferredGap(
+																												ComponentPlacement.RELATED)
+																										.addComponent(
+																												textFieldSecretaria))
+																						.addGroup(
+																								Alignment.LEADING,
+																								groupLayout
+																										.createSequentialGroup()
+																										.addComponent(
+																												lblConselho)
+																										.addPreferredGap(
+																												ComponentPlacement.UNRELATED)
+																										.addComponent(
+																												textFieldConselho,
+																												GroupLayout.PREFERRED_SIZE,
+																												106,
+																												GroupLayout.PREFERRED_SIZE)
+																										.addGap(18)
+																										.addComponent(
+																												lblMatricula)))
+																		.addPreferredGap(
+																				ComponentPlacement.UNRELATED)
+																		.addComponent(
+																				textFieldMatricula,
+																				GroupLayout.PREFERRED_SIZE,
+																				106,
+																				GroupLayout.PREFERRED_SIZE))
+														.addGroup(
+																groupLayout
+																		.createSequentialGroup()
+																		.addComponent(
+																				lblCargaHorariaSemanal)
+																		.addPreferredGap(
+																				ComponentPlacement.RELATED)
+																		.addComponent(
+																				textFieldCargaHorariaSemanal,
+																				GroupLayout.PREFERRED_SIZE,
+																				GroupLayout.DEFAULT_SIZE,
+																				GroupLayout.PREFERRED_SIZE)))
+										.addContainerGap(37, Short.MAX_VALUE))
+						.addGroup(
+								Alignment.TRAILING,
+								groupLayout
+										.createSequentialGroup()
+										.addContainerGap(240, Short.MAX_VALUE)
+										.addComponent(btnCadastrar)
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addComponent(btnCancelar).addGap(26)));
+		groupLayout
+				.setVerticalGroup(groupLayout
+						.createParallelGroup(Alignment.LEADING)
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addContainerGap()
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(lblNome)
+														.addComponent(
+																textFieldNome,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.UNRELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addGroup(
+																groupLayout
+																		.createParallelGroup(
+																				Alignment.BASELINE)
+																		.addComponent(
+																				textFieldRg,
+																				GroupLayout.PREFERRED_SIZE,
+																				GroupLayout.DEFAULT_SIZE,
+																				GroupLayout.PREFERRED_SIZE)
+																		.addComponent(
+																				lblCpf)
+																		.addComponent(
+																				textFieldCpf,
+																				GroupLayout.PREFERRED_SIZE,
+																				GroupLayout.DEFAULT_SIZE,
+																				GroupLayout.PREFERRED_SIZE))
+														.addComponent(lblRg))
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																textFieldDataNasc,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																lblDataNasc))
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																textFieldNomeMae,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																lblNomeMae))
+										.addPreferredGap(
+												ComponentPlacement.UNRELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																textFieldEndereco,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																lblEndereco))
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(lblCep)
+														.addComponent(
+																textFieldCep,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.UNRELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.BASELINE)
+														.addComponent(
+																lblTelefone)
+														.addComponent(
+																textFieldTelefone,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.BASELINE)
+														.addComponent(lblEmail)
+														.addComponent(
+																textFieldEmail,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.UNRELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.BASELINE)
+														.addComponent(
+																lblConselho)
+														.addComponent(
+																textFieldConselho,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																lblMatricula)
+														.addComponent(
+																textFieldMatricula,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.BASELINE)
+														.addComponent(
+																lblSecretaria)
+														.addComponent(
+																textFieldSecretaria,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.UNRELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(lblCargo)
+														.addComponent(
+																textFieldCargo,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(lblFuncao)
+														.addComponent(
+																textFieldFuncao,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.UNRELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.BASELINE)
+														.addComponent(
+																lblCargaHorariaSemanal)
+														.addComponent(
+																textFieldCargaHorariaSemanal,
+																GroupLayout.PREFERRED_SIZE,
+																GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+										.addPreferredGap(
+												ComponentPlacement.UNRELATED)
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.BASELINE)
+														.addComponent(
+																btnCadastrar)
+														.addComponent(
+																btnCancelar))
+										.addContainerGap(
+												GroupLayout.DEFAULT_SIZE,
+												Short.MAX_VALUE)));
+		setLayout(groupLayout);
+
+	}
+}

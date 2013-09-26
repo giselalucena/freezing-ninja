@@ -1,0 +1,182 @@
+package projeto.jfc;
+
+import java.awt.FlowLayout;
+import java.awt.event.KeyEvent;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import projeto.jfc.CadastroFuncionarioCadastrarAction;
+import projeto.jfc.JCadastroFuncionarioCancelarAction;
+import projeto.pojo.Funcionario;
+
+
+public class JCadastroFuncionarioPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	
+	
+	private JTextField nome;
+	private JTextField rg;
+	private JTextField cpf;
+	private JTextField dataNasc;
+	private JTextField nomeMae;
+	private JTextField endereco;
+	private JTextField cep;
+	private JTextField telefone;
+	private JTextField email;
+	private JTextField conselho;
+	private JTextField matricula;
+	private JTextField secretaria;
+	private JTextField cargo;
+	private JTextField funcao;
+	private JTextField cargaHorariaSemanal;
+
+	/**
+	 * 
+	 * @return
+	 */
+	public Funcionario getFuncionario() {
+		return new Funcionario( nome.getText(), rg.getText(), cpf.getText(),dataNasc.getText(), nomeMae.getText(),
+				endereco.getText(),cep.getText(), telefone.getText(),email.getText(), conselho.getText(),matricula.getText(),
+				secretaria.getText(),cargo.getText(), funcao.getText(), cargaHorariaSemanal.getText());
+	}
+
+	public void clear() {
+		nome.setText("");
+		rg.setText("");
+		cpf.setText("");
+		dataNasc.setText("");
+		nomeMae.setText("");
+		endereco.setText("");
+		cep.setText("");
+		telefone.setText("");
+		email.setText("");
+		conselho.setText("");
+		matricula.setText("");
+		secretaria.setText("");
+		cargo.setText("");
+		funcao.setText("");
+		cargaHorariaSemanal.setText("");
+	}
+
+
+	/**
+	 * 
+	 */
+	public JCadastroFuncionarioPanel() {
+		JLabel label;
+
+		setLayout(new FlowLayout());
+
+		
+
+		label = new JLabel("NOME:");
+		add(label);
+		nome = new JTextField(10);
+		label.setLabelFor(nome);
+		add(nome);
+		
+		label = new JLabel("RG:");
+		add(label);
+		rg = new JTextField(10);
+		label.setLabelFor(rg);
+		add(rg);
+		
+		label = new JLabel("CPF:");
+		add(label);
+		cpf = new JTextField(10);
+		label.setLabelFor(cpf);
+		add(cpf);
+
+		label = new JLabel("DATA NASCIMENTO:");
+		add(label);
+		dataNasc = new JTextField(10);
+		label.setLabelFor(dataNasc);
+		add(dataNasc);
+		
+		label = new JLabel ("NOME MÃE:");
+		add(label);
+		nomeMae = new JTextField(10);
+		label.setLabelFor(nomeMae);
+		add(nomeMae);
+		
+		label = new JLabel("ENDEREÇO:");
+		add(label);
+		endereco = new JTextField(10);
+		label.setLabelFor(endereco);
+		add(endereco);
+		
+		label = new JLabel("CEP:");
+		add(label);
+		cep = new JTextField(10);
+		label.setLabelFor(cep);
+		add(cep);
+		
+		label = new JLabel("TELEFONE:");
+		add(label);
+		telefone = new JTextField(10);
+		label.setLabelFor(telefone);
+		add(telefone);
+
+		label = new JLabel("E-MAIL:");
+		add(label);
+		email = new JTextField(10);
+		label.setLabelFor(email);
+		add(email);
+		
+		label = new JLabel("CONSELHO:");
+		add(label);
+		conselho = new JTextField(10);
+		label.setLabelFor(conselho);
+		add(conselho);
+		
+		label = new JLabel("MATRÍCULA:");
+		add(label);
+		matricula = new JTextField(10);
+		label.setLabelFor(matricula);
+		add(matricula);
+		
+		label = new JLabel("SECRETÁRIA:");
+		add(label);
+		secretaria = new JTextField(10);
+		label.setLabelFor(secretaria);
+		add(secretaria);
+		
+		label = new JLabel("CARGO:");
+		add(label);
+		cargo = new JTextField(10);
+		label.setLabelFor(cargo);
+		add(cargo);
+		
+		label = new JLabel("FUNÇÃO:");
+		add(label);
+		funcao = new JTextField(10);
+		label.setLabelFor(funcao);
+		add(funcao);
+		
+		label = new JLabel ("CARGA HORÁRIA SEMANAL:");
+		add(label);
+		cargaHorariaSemanal = new JTextField(10);
+		label.setLabelFor(cargaHorariaSemanal);
+		add(cargaHorariaSemanal);
+		
+
+		JButton button;
+
+		button = new JButton(new CadastroFuncionarioCadastrarAction(this));
+		button.setToolTipText("Cadastrar Funcionário");
+		button.setMnemonic(KeyEvent.VK_C);
+		add(button);
+
+		button = new JButton(new JCadastroFuncionarioCancelarAction(this));
+		button.setToolTipText("Cancelar Cadastro do Funcionário");
+		button.setMnemonic(KeyEvent.VK_N);
+		add(button);		
+	}
+}

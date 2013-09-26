@@ -36,18 +36,19 @@ public class ProjetoDAO {
 				String nome = rs.getString(1);
 				String rg = rs.getString(2);
 				String cpf = rs.getString("cpf");
-				String nomeMae = rs.getString(4);
-				String endereco = rs.getString(5);
-				String cep = rs.getString(6);
-				String telefone = rs.getString(7);
-				String email = rs.getString(8);
-				String conselho= rs.getString(9);
-				String matricula= rs.getString(10);
-				int secretaria= rs.getInt(11);
-				int cargo= rs.getInt(12);
-				int funcao= rs.getInt(13);
-				int cargaHorariaSemanal = rs.getInt(14);
-				func = new Funcionario(nome,rg,cpf,nomeMae,endereco,cep,telefone,email,conselho,matricula,secretaria,cargo,funcao,cargaHorariaSemanal);
+				String dataNasc = rs.getString(4);
+				String nomeMae = rs.getString(5);
+				String endereco = rs.getString(6);
+				String cep = rs.getString(7);
+				String telefone = rs.getString(8);
+				String email = rs.getString(9);
+				String conselho= rs.getString(10);
+				String matricula= rs.getString(11);
+				String secretaria= rs.getString(12);
+				String cargo= rs.getString(13);
+				String funcao= rs.getString(14);
+				String cargaHorariaSemanal = rs.getString(15);
+				func = new Funcionario(nome,rg,cpf,dataNasc,nomeMae,endereco,cep,telefone,email,conselho,matricula,secretaria,cargo,funcao,cargaHorariaSemanal);
 			}
 
 		} catch (Exception e) {
@@ -71,7 +72,7 @@ public class ProjetoDAO {
 	}
 
 	public void insertFunc(Funcionario func) {
-		String cmd = "INSERT INTO funcionario (nome,rg,cpf,nomeMae,endereco,cep,telefone,email,conselho,matricula,secretaria,cargo,funcao,cargaHorariaSemanal) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String cmd = "INSERT INTO funcionario (nome,rg,cpf,dataNasc,nomeMae,endereco,cep,telefone,email,conselho,matricula,secretaria,cargo,funcao,cargaHorariaSemanal) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		Connection db = null;
 		PreparedStatement st = null;
 
@@ -87,17 +88,18 @@ public class ProjetoDAO {
 			st.setString(1, func.getNome());
 			st.setString(2, func.getRg());
 			st.setString(3, func.getCpf());
-			st.setString(4, func.getNomeMae());
-			st.setString(5, func.getEndereco());
-			st.setString(6, func.getCep());
-			st.setString(7, func.getTelefone());
-			st.setString(8, func.getEmail());
-			st.setString(9, func.getConselho());
-			st.setString(10, func.getMatricula());
-			st.setInt(11, func.getCargo());
-			st.setInt(12, func.getFuncao());
-			st.setInt(13,func.getSecretaria());
-			st.setInt(14,func.getCargaHorariaSemanal());
+			st.setString(4, func.getDataNasc());
+			st.setString(5, func.getNomeMae());
+			st.setString(6, func.getEndereco());
+			st.setString(7, func.getCep());
+			st.setString(8, func.getTelefone());
+			st.setString(9, func.getEmail());
+			st.setString(10, func.getConselho());
+			st.setString(11, func.getMatricula());
+			st.setInt(12, func.getCargo());
+			st.setInt(13, func.getFuncao());
+			st.setInt(14,func.getSecretaria());
+			st.setInt(15,func.getCargaHorariaSemanal());
 			int r = st.executeUpdate();
 
 			if (r != 1) {

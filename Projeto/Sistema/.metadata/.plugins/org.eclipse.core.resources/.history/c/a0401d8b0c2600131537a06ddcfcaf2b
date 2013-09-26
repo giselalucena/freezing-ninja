@@ -1,0 +1,15 @@
+package projeto.jfc;
+
+import javax.swing.JPanel;
+import javax.swing.JInternalFrame;
+
+public class CadastroFuncionarioPanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public CadastroFuncionarioPanel() {
+
+	}
+
+}

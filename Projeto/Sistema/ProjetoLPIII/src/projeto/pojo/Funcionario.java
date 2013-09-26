@@ -1,10 +1,12 @@
 package projeto.pojo;
 
+import java.util.Date;
+
 public class Funcionario {
 	private String nome;
 	private String rg;
 	private String cpf;
-	// dataNasc date;
+	private Date dataNasc;
 	private String nomeMae;
 	private String endereco;
 	private String cep;
@@ -17,7 +19,7 @@ public class Funcionario {
 	private int funcao;
 	private int cargaHorariaSemanal;
 
-	public Funcionario(String nome, String rg, String cpf, String nomeMae,
+	public Funcionario(String nome, String rg, String cpf, Date dataNasc,String nomeMae,
 			String endereco, String cep, String telefone, String email,
 			String conselho, String matricula, int secretaria, int cargo,
 			int funcao, int cargaHorariaSemanal) {
@@ -25,6 +27,7 @@ public class Funcionario {
 		this.nome = nome;
 		this.rg = rg;
 		this.cpf = cpf;
+		this.dataNasc = dataNasc;
 		this.nomeMae = nomeMae;
 		this.endereco = endereco;
 		this.cep = cep;
@@ -39,7 +42,7 @@ public class Funcionario {
 
 	}
 
-	public Funcionario(String nome, String rg, String cpf, String nomeMae,
+	public Funcionario(String nome, String rg, String cpf, Date dataNasc, String nomeMae,
 			String endereco, String cep, String telefone, String email,
 			String matricula, int secretaria, int cargo, int funcao,
 			int cargaHorariaSemanal) {
@@ -47,6 +50,7 @@ public class Funcionario {
 		this.nome = nome;
 		this.rg = rg;
 		this.cpf = cpf;
+		this.dataNasc = dataNasc;
 		this.nomeMae = nomeMae;
 		this.endereco = endereco;
 		this.cep = cep;
@@ -70,6 +74,10 @@ public class Funcionario {
 
 		public String getCpf() {
 			return cpf;
+		}
+		
+		public Date getDataNasc(){
+			return dataNasc;
 		}
 
 		public String getNomeMae() {
@@ -118,8 +126,8 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return String.format("Funcionario [nome=%s, rg=%s, cpf=%s, nomeMae=%s, endereco=%s, cep=%s, telefone=%s, email=%s, conselho=%s, matricula=%s, secretaria=%s, cargo=%s,funcao = %s, cargaHorariaSemanal=%s]",
-						nome, rg, cpf, nomeMae, endereco, cep, telefone, email,
+		return String.format("Funcionario [nome=%s, rg=%s, cpf=%s, dataNasc=%s, nomeMae=%s, endereco=%s, cep=%s, telefone=%s, email=%s, conselho=%s, matricula=%s, secretaria=%s, cargo=%s,funcao = %s, cargaHorariaSemanal=%s]",
+						nome, rg, cpf, dataNasc, nomeMae, endereco, cep, telefone, email,
 						conselho, matricula, secretaria, cargo, funcao,
 						cargaHorariaSemanal);
 	}
