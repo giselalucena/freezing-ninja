@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import projeto.jfc.JCadastroFuncionarioPanel;
+import projeto.jfc.CadastroFuncionarioPanel;
 
 public class CadastroFuncionarioCancelarAction extends AbstractAction {
 	/**
