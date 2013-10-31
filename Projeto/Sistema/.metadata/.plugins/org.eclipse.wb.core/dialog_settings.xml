@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.models.table.TableModelDialog">
+		<item value="552" key="height"/>
+		<item value="776" key="width"/>
+		<item value="93" key="y"/>
+		<item value="295" key="x"/>
+	</section>
 	<section name="org.eclipse.wb.internal.core.editor.actions.errors.ErrorsDialog">
 		<item value="645" key="height"/>
 		<item value="684" key="width"/>
@@ -9,6 +15,12 @@
 	<section name="org.eclipse.wb.internal.core.editor.actions.assistant.LayoutAssistantWindow">
 		<item value="316" key="y"/>
 		<item value="644" key="x"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.model.property.editor.string.StringPropertyDialog">
+		<item value="345" key="height"/>
+		<item value="530" key="width"/>
+		<item value="196" key="y"/>
+		<item value="418" key="x"/>
 	</section>
 	<section name="org.eclipse.wb.internal.core.editor.errors.report2.CreateReportDialog">
 		<item value="345" key="height"/>

@@ -14,15 +14,15 @@ public class Funcionario {
 	private String email;
 	private String conselho;
 	private String matricula;
-	private int secretaria;
-	private int cargo;
-	private int funcao;
+	private String secretaria;
+	private String cargo;
+	private String funcao;
 	private int cargaHorariaSemanal;
 
 	public Funcionario(String nome, String rg, String cpf, Date dataNasc,String nomeMae,
 			String endereco, String cep, String telefone, String email,
-			String conselho, String matricula, int secretaria, int cargo,
-			int funcao, int cargaHorariaSemanal) {
+			String conselho, String matricula, String secretaria, String cargo,
+			String funcao, int cargaHorariaSemanal) {
 		super();
 		this.nome = nome;
 		this.rg = rg;
@@ -44,7 +44,7 @@ public class Funcionario {
 
 	public Funcionario(String nome, String rg, String cpf, Date dataNasc, String nomeMae,
 			String endereco, String cep, String telefone, String email,
-			String matricula, int secretaria, int cargo, int funcao,
+			String matricula, String secretaria, String cargo, String funcao,
 			int cargaHorariaSemanal) {
 		super();
 		this.nome = nome;
@@ -108,15 +108,15 @@ public class Funcionario {
 			return matricula;
 		}
 
-		public int getSecretaria() {
+		public String getSecretaria() {
 			return secretaria;
 		}
 
-		public int getCargo() {
+		public String getCargo() {
 			return cargo;
 		}
 
-		public int getFuncao() {
+		public String getFuncao() {
 			return funcao;
 		}
 

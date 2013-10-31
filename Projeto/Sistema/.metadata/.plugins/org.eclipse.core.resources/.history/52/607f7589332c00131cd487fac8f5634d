@@ -1,0 +1,26 @@
+package projeto.jfc;
+
+import javax.swing.JPanel;
+import javax.swing.JTable;
+
+public class FuncionariosPanel extends JPanel {
+	private JTable tableFuncionarios;
+
+	/**
+	 * Create the panel.
+	 */
+	public FuncionariosPanel() {
+		
+		tableFuncionarios = new JTable();
+		add(tableFuncionarios);
+		
+		
+		String[] columnNames = {"First Name",
+                "Last Name",
+                "Sport",
+                "# of Years",
+                "Vegetarian"};
+
+	}
+
+}

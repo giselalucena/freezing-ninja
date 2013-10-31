@@ -1,0 +1,272 @@
+package projeto.jfc;
+
+import java.awt.event.KeyEvent;
+
+import javax.swing.JPanel;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JButton;
+
+import projeto.pojo.Funcionario;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+
+public class CadastroFuncionarioPanel extends JPanel {
+	private JTextField nome;
+	private JTextField rg;
+	private JTextField cpf;
+	private JTextField dataNasc;
+	private JTextField nomeMae;
+	private JTextField endereco;
+	private JTextField cep;
+	private JTextField telefone;
+	private JTextField email;
+	private JTextField conselho;
+	private JTextField matricula;
+	private JTextField cargaHorariaSemanal;
+	private final CadastroFuncionarioCadastrarAction cadastroFuncionarioCadastrarAction = new CadastroFuncionarioCadastrarAction((CadastroFuncionarioPanel) null);
+	private final CadastroFuncionarioCancelarAction cadastroFuncionarioCancelarAction = new CadastroFuncionarioCancelarAction((CadastroFuncionarioPanel) null);
+
+	/**
+	 * Create the panel.
+	 */
+	public CadastroFuncionarioPanel() {
+		
+		JLabel lblNome = new JLabel("Nome:");
+		
+		nome = new JTextField();
+		nome.setColumns(10);
+		
+		JLabel lblRg = new JLabel("RG:");
+		
+		rg = new JTextField();
+		rg.setColumns(10);
+		
+		JLabel lblCpf = new JLabel("CPF:");
+		
+		cpf = new JTextField();
+		cpf.setColumns(10);
+		
+		JLabel lblDataNasc = new JLabel("Data de Nascimento:");
+		
+		dataNasc = new JTextField();
+		dataNasc.setColumns(10);
+		
+		JLabel lblNomeMae = new JLabel("Nome da Mãe:");
+		
+		nomeMae = new JTextField();
+		nomeMae.setColumns(10);
+		
+		JLabel lblEndereco = new JLabel("Endereço:");
+		
+		endereco = new JTextField();
+		endereco.setColumns(10);
+		
+		JLabel lblCep = new JLabel("CEP:");
+		
+		cep = new JTextField();
+		cep.setColumns(10);
+		
+		JLabel lblTelefone = new JLabel("Telefone:");
+		
+		telefone = new JTextField();
+		telefone.setColumns(10);
+		
+		JLabel lblEmail = new JLabel("E-mail:");
+		
+		email = new JTextField();
+		email.setColumns(10);
+		
+		JLabel lblConselho = new JLabel("Conselho:");
+		
+		conselho = new JTextField();
+		conselho.setColumns(10);
+		
+		JLabel lblMatricula = new JLabel("Matrícula:");
+		
+		matricula = new JTextField();
+		matricula.setColumns(10);
+		
+		JLabel lblSecretaria = new JLabel("Secretária:");
+		
+		JLabel lblCargo = new JLabel("Cargo:");
+		
+		JLabel lblFuncao = new JLabel("Função:");
+		
+		JLabel lblCargaHorariaSemanal = new JLabel("Carga Horária Semanal:");
+		
+		cargaHorariaSemanal = new JTextField();
+		cargaHorariaSemanal.setColumns(10);
+		
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setAction(cadastroFuncionarioCadastrarAction);
+		btnCadastrar.setMnemonic(KeyEvent.VK_C);
+		
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setAction(cadastroFuncionarioCancelarAction);
+		btnCancelar.setMnemonic(KeyEvent.VK_N);
+		
+		JComboBox secretaria = new JComboBox();
+		
+		JComboBox cargo = new JComboBox();
+		cargo.setModel(new DefaultComboBoxModel(new String[] {"Selecione........", "Coordenador", "Dentista", "Enfermeiro(a)", "Estagiário", "Médico(a)", "Recepção", "Técnico(a)/Auxilar de Enfermagem"}));
+		
+		JComboBox funcao = new JComboBox();
+		funcao.setModel(new DefaultComboBoxModel(new String[] {"Selecione.......", "Auxiliar de Odontológia", "Buco Facial", "Cirurgião Dentista"}));
+		GroupLayout groupLayout = new GroupLayout(this);
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addContainerGap()
+							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblRg)
+										.addGap(76)
+										.addComponent(rg, GroupLayout.PREFERRED_SIZE, 143, GroupLayout.PREFERRED_SIZE)
+										.addGap(18)
+										.addComponent(lblCpf)
+										.addPreferredGap(ComponentPlacement.UNRELATED)
+										.addComponent(cpf))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblDataNasc)
+										.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(dataNasc, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblNomeMae)
+										.addPreferredGap(ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+										.addComponent(nomeMae, 328, 328, 328))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblEndereco)
+										.addPreferredGap(ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+										.addComponent(endereco, 348, 348, 348))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblCep)
+										.addPreferredGap(ComponentPlacement.RELATED, 419, Short.MAX_VALUE)
+										.addComponent(cep, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addComponent(lblTelefone)
+										.addPreferredGap(ComponentPlacement.RELATED, 396, Short.MAX_VALUE)
+										.addComponent(telefone, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+									.addGroup(groupLayout.createSequentialGroup()
+										.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+											.addGroup(groupLayout.createSequentialGroup()
+												.addComponent(lblConselho)
+												.addPreferredGap(ComponentPlacement.UNRELATED)
+												.addComponent(conselho, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE)
+												.addGap(27)
+												.addComponent(lblMatricula)
+												.addPreferredGap(ComponentPlacement.UNRELATED)
+												.addComponent(matricula, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE))
+											.addGroup(groupLayout.createSequentialGroup()
+												.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+													.addGroup(groupLayout.createSequentialGroup()
+														.addComponent(lblSecretaria)
+														.addPreferredGap(ComponentPlacement.RELATED))
+													.addGroup(groupLayout.createSequentialGroup()
+														.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+															.addComponent(lblCargo)
+															.addComponent(lblFuncao))
+														.addGap(18)))
+												.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+													.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+														.addComponent(funcao, Alignment.LEADING, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+														.addComponent(cargo, Alignment.LEADING, 0, 180, Short.MAX_VALUE))
+													.addComponent(secretaria, GroupLayout.PREFERRED_SIZE, 352, GroupLayout.PREFERRED_SIZE)))
+											.addGroup(groupLayout.createSequentialGroup()
+												.addComponent(lblEmail)
+												.addPreferredGap(ComponentPlacement.UNRELATED)
+												.addComponent(email, 246, 246, 246)))
+										.addGap(119))
+									.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+										.addComponent(lblNome, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(nome, GroupLayout.PREFERRED_SIZE, 366, GroupLayout.PREFERRED_SIZE)
+										.addGap(121)))
+								.addGroup(groupLayout.createSequentialGroup()
+									.addComponent(lblCargaHorariaSemanal)
+									.addPreferredGap(ComponentPlacement.UNRELATED)
+									.addComponent(cargaHorariaSemanal, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(109)
+							.addComponent(btnCadastrar)
+							.addGap(18)
+							.addComponent(btnCancelar)))
+					.addGap(33))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblNome)
+						.addComponent(nome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+							.addComponent(rg, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblCpf)
+							.addComponent(cpf, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(lblRg))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addComponent(dataNasc, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(nomeMae, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(lblNomeMae))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(endereco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(lblEndereco))
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(cep, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(lblCep))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(telefone, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(lblTelefone)))
+						.addComponent(lblDataNasc))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblEmail)
+						.addComponent(email, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblConselho)
+						.addComponent(conselho, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblMatricula)
+						.addComponent(matricula, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblSecretaria)
+						.addComponent(secretaria, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblCargo)
+						.addComponent(cargo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblFuncao)
+						.addComponent(funcao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblCargaHorariaSemanal)
+						.addComponent(cargaHorariaSemanal, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnCadastrar)
+						.addComponent(btnCancelar))
+					.addGap(27))
+		);
+		setLayout(groupLayout);
+
+	}
+}

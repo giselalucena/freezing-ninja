@@ -1,0 +1,56 @@
+package projeto.jfc;
+
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+
+import projeto.pojo.Funcionario;
+
+public class FuncionariosPanel extends JPanel {
+	
+	private boolean DEBUG = false;
+	
+	private JTable tableFuncionarios;
+
+	/**
+	 * Create the panel.
+	 */
+	public FuncionariosPanel(Funcionario func)  {
+		super(new GridLayout(1,0));
+		
+		tableFuncionarios = new JTable(new MyTableModel());
+		
+		tableFuncionarios.setPreferredScrollableViewportSize(new Dimension(500,70));
+		tableFuncionarios.setFillsViewportHeight(true);
+		
+		tableFuncionarios.setForeground(new Color(0, 0, 0));
+		
+		JScrollPane scrollPane = new JScrollPane(tableFuncionarios);
+		
+		add(scrollPane);
+		
+	}
+	class MyTableModel extends AbstractTableModel {
+		tableFuncionarios.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+			},
+			new String[] {
+				"NOME", "RG", "CPF", "DATA DE NASCIMENTO", "NOME DA M\u00C3E", "ENDERE\u00C7O", "CEP", "TELEFONE", "EMAIL", "CONSELHO", "MATR\u00CDCULA", "SECRET\u00C1RIA", "CARGO", "FUN\u00C7\u00C3O", "CARGA HOR\u00C1RIA"
+			}
+		));
+		add(tableFuncionarios);
+
+	}
+
+}

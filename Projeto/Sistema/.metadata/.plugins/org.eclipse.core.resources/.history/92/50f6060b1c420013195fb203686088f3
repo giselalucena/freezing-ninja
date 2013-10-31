@@ -1,0 +1,82 @@
+package projeto.jfc;
+
+import java.util.Date;
+import java.util.List;
+
+import projeto.dao.ProjetoDAO;
+
+import javax.swing.table.AbstractTableModel;
+
+
+
+
+import projeto.pojo.Funcionario;
+
+public class MyTableModel  extends AbstractTableModel {
+	private Funcionario func;
+	private List<Funcionario>  listFunc;
+	
+public MyTableModel(Funcionario func){
+		this.func = func;
+		ProjetoDao dao = new ProjetoDao();
+		listFunc = new findFuncByFuncionario();
+		
+		
+	}
+	
+	
+	@Override
+	public int getColumnCount() {
+		// TODO Auto-generated method stub
+		return 15;
+	}
+
+	@Override
+	public int getRowCount() {
+		// TODO Auto-generated method stub
+		return listFunc.size();
+	}
+
+	@Override
+	public Object getValueAt(int lin, int col) {
+		
+		Funcionario func = listFunc.get(lin);
+		switch(col) {
+		// TODO Auto-generated method stub
+		case 0:
+		return func.getNome();
+		case 1:
+		return func.getRg();
+		case 2:
+		return func.getCpf();
+		case 3:
+		return func.getDataNasc();
+		case 4:
+		return func.getNomeMae();
+		case 5:
+		return func.getEndereco();
+		case 6:
+		return func.getCep();
+		case 7:
+		return func.getTelefone();
+		case 8:
+		return func.getEmail();
+		case 9:
+		return func.getConselho();
+		case 10:
+		return func.getMatricula();
+		case 11:
+		return func.getSecretaria();
+		case 12:
+		return func.getCargo();
+		case 13:
+		return func.getFuncao();
+		case 14:
+		return func.getCargaHorariaSemanal();
+			
+		default:
+				return "*ERRO*";
+		}
+	}
+
+}

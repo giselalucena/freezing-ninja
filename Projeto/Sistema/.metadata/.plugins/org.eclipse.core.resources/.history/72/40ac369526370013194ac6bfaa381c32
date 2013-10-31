@@ -1,0 +1,90 @@
+package projeto.jfc;
+
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
+
+public class Menu extends JFrame {
+
+	private JPanel contentPane;
+	private final SairAction sairAction = new SairAction();
+	private final SobreAction sobreAction = new SobreAction((JFrame) null);
+	private final CadastroFuncionarioAction cadastroFuncionarioAction = new CadastroFuncionarioAction((CadastroFuncionario) null);
+
+	
+	
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu frame = new Menu();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Menu() {
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnArquivo = new JMenu("Arquivo");
+		mnArquivo.setMnemonic(KeyEvent.VK_A);
+		menuBar.add(mnArquivo);
+		
+		JMenuItem mntmSair = new JMenuItem("Sair");
+		mntmSair.setMnemonic(KeyEvent.VK_S);
+		mntmSair.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, ActionEvent.CTRL_MASK));
+		mntmSair.setAction(sairAction);
+		mnArquivo.add(mntmSair);
+		
+		JMenu mnFuncionarios = new JMenu("Funcionários");
+		mnFuncionarios.setMnemonic(KeyEvent.VK_F);
+		menuBar.add(mnFuncionarios);
+		
+		JMenuItem mntmCadastrarFuncionario = new JMenuItem("Cadastrar Funcionário");
+		mntmCadastrarFuncionario.setAction(cadastroFuncionarioAction);
+		mnFuncionarios.add(mntmCadastrarFuncionario);
+		
+		JMenuItem mntmFuncionarios = new JMenuItem("Funcion\u00E1rios ");
+		mnFuncionarios.add(mntmFuncionarios);
+		
+		JMenu mnAjuda = new JMenu("Ajuda");
+		mnAjuda.setMnemonic(KeyEvent.VK_U);
+		menuBar.add(mnAjuda);
+		
+		JMenuItem mntmSobre = new JMenuItem("Sobre");
+		mntmSobre.setAction(sobreAction);
+		mntmSobre.setMnemonic(KeyEvent.VK_S);
+		mnAjuda.add(mntmSobre);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+	}
+
+}

@@ -2,6 +2,7 @@ package projeto.jfc;
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
+import javax.swing.JOptionPane;
 
 import projeto.dao.ProjetoDAO;
 import projeto.jfc.CadastroFuncionarioPanel;
@@ -24,9 +25,16 @@ public class CadastroFuncionarioCadastrarAction extends AbstractAction {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		Funcionario func = panel.getFuncionario();
-		//System.out.println(c);
-		ProjetoDAO dao = new ProjetoDAO();
-		dao.insertFunc(func);
-	}
+		try {
+            Funcionario func = panel.getFuncionario();
+           
+           ProjetoDAO dao = new ProjetoDAO();
+            dao.insertFunc(func);
+    } catch(Exception e) {
+            JOptionPane.showMessageDialog(null,"ERRO");
+    } finally {
+            panel.clear();
+            
+    }
+}
 }
